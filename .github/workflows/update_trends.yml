@@ -9,12 +9,17 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v4
       with:
         python-version: '3.9'
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3  # Node.js 설정 추가
+      with:
+        node-version: '20'
 
     - name: Install dependencies
       run: |
